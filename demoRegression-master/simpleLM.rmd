@@ -18,7 +18,7 @@ bears$SEX<- as.factor(bears$SEX)
 bears$MONTH<- as.factor(bears$MONTH)
 ```
 
-## Model LENGTH ~ NECK  this is an example  
+# Models in Order of Fitness  
 
 ```{r}
 simp <- lm(LENGTH~NECK,data=bears)
@@ -27,6 +27,16 @@ abline(simp)
 summary.lm(simp)
 ```
 
+
+## Head Length (First)
+```{r}
+HeadLen <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+abline(HeadLen)
+summary.lm(HeadLen)
+```
+Adjusted R Squared - 0.8434
+Residual Standard Error - 4.235
 
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
