@@ -68,5 +68,15 @@ summary.lm(Weight)
 Adjusted R Squared - 0.7423
 Residual Standard Error - 5.432
 
+## Headwidth (Fifth)
+```{r}
+HeadWth <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(HeadWth)
+summary.lm(HeadWth)
+```
+Adjusted R Squared - 0.5321
+Residual Standard Error - 7.23
+
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
