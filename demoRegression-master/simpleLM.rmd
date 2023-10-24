@@ -38,5 +38,15 @@ summary.lm(HeadLen)
 Adjusted R Squared - 0.8434
 Residual Standard Error - 4.235
 
+## Chest (Second)
+```{r}
+Chest <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(Chest)
+summary.lm(Chest)
+```
+Adjusted R Squared - 0.7869
+Residual Standard Error - 4.939
+
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
