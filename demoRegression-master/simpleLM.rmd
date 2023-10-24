@@ -78,5 +78,14 @@ summary.lm(HeadWth)
 Adjusted R Squared - 0.5321
 Residual Standard Error - 7.23
 
+## Age (Sixth)
+```{r}
+Age <- lm(LENGTH~AGE,data=bears)
+plot(LENGTH~AGE,data=bears)
+abline(Age)
+summary.lm(Age)
+```
+Adjusted R Squared - 0.5073
+Residual Standard Error - 7.511
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
